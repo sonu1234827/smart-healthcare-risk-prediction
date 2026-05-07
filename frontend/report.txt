@@ -1,0 +1,37 @@
+=====================================
+ SMART HEALTHCARE RISK REPORT
+=====================================
+
+PATIENT DETAILS
+----------------------------
+Name : Anil Kumar
+Age : 15
+Gender : Male
+Disease Type : diabetes
+
+PREDICTION RESULT
+----------------------------
+Prediction : Low Risk
+Probability : 0.87%
+
+EXTRACTED FEATURES
+----------------------------
+BMI : 22.4
+BloodPressure : 68.0
+Glucose : 92.0
+Insulin : 85.0
+
+AI FEATURE EXPLANATIONS
+----------------------------
+- Glucose is within normal/moderate range.
+- BMI is within normal/moderate range.
+- BloodPressure is within normal/moderate range.
+- Insulin is within normal/moderate range.
+
+RECOMMENDATIONS
+----------------------------
+Maintain healthy lifestyle.
+
+DISCLAIMER
+----------------------------
+This report is AI-generated and not a substitute for professional medical advice.

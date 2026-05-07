@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Report Preview</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='css/style.css') }}">
+
+</head>
+
+<body class="bg-dark text-light">
+
+<div class="container mt-5">
+
+    <!-- Title -->
+    <h1 class="text-center mb-4">
+        📄 Report Preview
+    </h1>
+
+    <!-- ========================= -->
+    <!-- PATIENT DETAILS -->
+    <!-- ========================= -->
+
+    <div class="card bg-secondary p-4 mt-4 shadow">
+
+        <h3 class="mb-4">
+            👤 Patient Details
+        </h3>
+
+        <div class="row">
+
+            <div class="col-md-4">
+                <p>
+                    <strong>Name:</strong>
+                    {{ patient.name }}
+                </p>
+            </div>
+
+            <div class="col-md-4">
+                <p>
+                    <strong>Age:</strong>
+                    {{ patient.age }}
+                </p>
+            </div>
+
+            <div class="col-md-4">
+                <p>
+                    <strong>Gender:</strong>
+                    {{ patient.gender }}
+                </p>
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- ========================= -->
+    <!-- EXTRACTED FEATURES -->
+    <!-- ========================= -->
+
+    <div class="card bg-secondary p-4 mt-4 shadow">
+
+        <h3 class="mb-4">
+            🧪 Extracted Features
+        </h3>
+
+        <table class="table table-dark table-striped table-hover">
+
+            <thead>
+                <tr>
+                    <th>Feature</th>
+                    <th>Value</th>
+                </tr>
+            </thead>
+
+            <tbody>
+
+                {% for k, v in extracted.items() %}
+
+                <tr>
+                    <td>{{ k }}</td>
+                    <td>{{ v }}</td>
+                </tr>
+
+                {% endfor %}
+
+            </tbody>
+
+        </table>
+
+    </div>
+
+    <!-- ========================= -->
+    <!-- ANALYZE -->
+    <!-- ========================= -->
+
+    <div class="text-center mt-5">
+
+        <!-- IMPORTANT -->
+        <form action="/analyze" method="post">
+
+            <!-- ========================= -->
+            <!-- DISEASE -->
+            <!-- ========================= -->
+
+            <input type="hidden"
+                   name="disease"
+                   value="{{ disease }}">
+
+            <!-- ========================= -->
+            <!-- PATIENT DETAILS -->
+            <!-- ========================= -->
+
+            <input type="hidden"
+                   name="name"
+                   value="{{ patient.name }}">
+
+            <input type="hidden"
+                   name="age"
+                   value="{{ patient.age }}">
+
+            <input type="hidden"
+                   name="gender"
+                   value="{{ patient.gender }}">
+
+            <!-- ========================= -->
+            <!-- EXTRACTED FEATURES -->
+            <!-- ========================= -->
+
+            {% for k, v in extracted.items() %}
+
+                <input type="hidden"
+                       name="{{ k }}"
+                       value="{{ v }}">
+
+            {% endfor %}
+
+            <!-- ========================= -->
+            <!-- BUTTON -->
+            <!-- ========================= -->
+
+            <button class="btn btn-primary btn-lg px-5">
+
+                🔍 Analyze Report
+
+            </button>
+
+        </form>
+
+    </div>
+
+</div>
+
+</body>
+</html>

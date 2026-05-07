@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Login</title>
+
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+          rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='css/style.css') }}">
+
+    <style>
+
+        body{
+
+            margin:0;
+            padding:0;
+
+            height:100vh;
+
+            display:flex;
+            justify-content:center;
+            align-items:center;
+
+            background:
+            linear-gradient(
+                rgba(0,0,0,0.75),
+                rgba(0,0,0,0.75)
+            ),
+
+            url('https://images.unsplash.com/photo-1584982751601-97dcc096659c?q=80&w=2070&auto=format&fit=crop');
+
+            background-size:cover;
+            background-position:center;
+
+            font-family:Arial, sans-serif;
+        }
+
+        .login-card{
+
+            width:400px;
+
+            background:rgba(20,20,20,0.85);
+
+            backdrop-filter:blur(10px);
+
+            border-radius:20px;
+
+            padding:40px;
+
+            box-shadow:0px 0px 25px rgba(0,0,0,0.5);
+
+            color:white;
+        }
+
+        .login-title{
+
+            text-align:center;
+
+            margin-bottom:30px;
+
+            font-size:2rem;
+
+            font-weight:bold;
+        }
+
+        .login-title i{
+
+            color:#00d4ff;
+        }
+
+        .form-control{
+
+            height:50px;
+
+            border-radius:10px;
+        }
+
+        .btn-login{
+
+            width:100%;
+
+            height:50px;
+
+            border-radius:10px;
+
+            font-size:18px;
+
+            font-weight:bold;
+        }
+
+        .bottom-text{
+
+            text-align:center;
+
+            margin-top:20px;
+        }
+
+        .bottom-text a{
+
+            color:#00d4ff;
+
+            text-decoration:none;
+
+            font-weight:bold;
+        }
+
+        .bottom-text a:hover{
+
+            text-decoration:underline;
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+    <div class="login-card">
+
+        <!-- TITLE -->
+        <div class="login-title">
+
+            <i class="fa-solid fa-heart-pulse"></i>
+
+            Smart Healthcare AI
+
+        </div>
+
+        <!-- ERROR -->
+        {% if error %}
+
+        <div class="alert alert-danger">
+
+            {{ error }}
+
+        </div>
+
+        {% endif %}
+
+        <!-- LOGIN FORM -->
+        <form method="POST">
+
+            <div class="mb-3">
+
+                <input type="text"
+                       name="username"
+                       class="form-control"
+                       placeholder="Enter Username"
+                       required>
+
+            </div>
+
+            <div class="mb-4">
+
+                <input type="password"
+                       name="password"
+                       class="form-control"
+                       placeholder="Enter Password"
+                       required>
+
+            </div>
+
+            <button type="submit"
+                    class="btn btn-primary btn-login">
+
+                Login
+
+            </button>
+
+        </form>
+
+        <!-- REGISTER -->
+        <div class="bottom-text">
+
+            Don't have an account?
+
+            <a href="/register">
+
+                Register
+
+            </a>
+
+        </div>
+
+    </div>
+
+</body>
+</html>
