@@ -90,27 +90,27 @@ Interactive Dashboard
 ```
 
 ---
-## 📸 Project Screenshots
+# 📸 Project Screenshots
 
-### 🔐 Login Page
+## 🔐 Login Page
 
 ![Login Page](assets/login.png)
 
 ---
 
-### 📄 Upload Medical Report
+## 📄 Upload Medical Report
 
 ![Upload Report](assets/upload.png)
 
 ---
 
-### 📊 Dashboard
+## 📊 Dashboard
 
 ![Dashboard](assets/dashboard.png)
 
 ---
 
-### 🧠 SHAP Explainability Graph
+## 🧠 SHAP Explainability Graph
 
 ![SHAP Graph](assets/graph.png)
 
