@@ -56,4 +56,5 @@ Smart Healthcare Risk Prediction System/
 ## Installation
 pip install -r requirements.txt
 ## Run the Project
-streamlit run app/app.py
+cd frontend
+python app.py 
