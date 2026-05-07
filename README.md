@@ -90,26 +90,29 @@ Interactive Dashboard
 ```
 
 ---
+## 📸 Project Screenshots
 
-# 📸 Project Screenshots
+### 🔐 Login Page
 
-## 🔐 Login Page
-
-Add screenshot here
-
-## 📄 Report Upload
-
-Add screenshot here
-
-## 📊 AI Dashboard
-
-Add screenshot here
-
-## 🧠 SHAP Explainability Graph
-
-Add screenshot here
+![Login Page](assets/login.png)
 
 ---
+
+### 📄 Upload Medical Report
+
+![Upload Report](assets/upload.png)
+
+---
+
+### 📊 Dashboard
+
+![Dashboard](assets/dashboard.png)
+
+---
+
+### 🧠 SHAP Explainability Graph
+
+![SHAP Graph](assets/graph.png)
 
 # ⚙️ Installation
 
